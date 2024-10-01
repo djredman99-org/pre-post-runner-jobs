@@ -1,0 +1,22 @@
+{
+    "name": "GitHub Actions Runner",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-vscode.cpptools"
+            ] 
+        }   
+    },
+ 
+    "postCreateCommand": "bash .devcontainer/setup-runner.sh",
+    "remoteEnv": {
+        "GITHUB_TOKEN": "${{ secrets.REGISTER_RUNNER_TOKEN }}"
+    }
+}
