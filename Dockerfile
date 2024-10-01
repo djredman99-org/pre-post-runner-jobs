@@ -25,5 +25,8 @@ RUN mkdir actions-runner && cd actions-runner \
 # Add the runner startup script
 COPY setup-runner.sh /home/runner/actions-runner/
 
+# Move the .env file to the runner's home directory
+COPY .env /home/runner/actions-runner/
+
 # Make the script executable
 RUN chmod +x /home/runner/actions-runner/setup-runner.sh
