@@ -12,10 +12,12 @@ fi
 pwd
 
 ls -la
-
+echo "-====CD====-"
 cd actions-runner
+pwd
+echo $GITHUB_TOKEN
 # Configure the runner
 ./config.sh --url $REPO_URL --token $GITHUB_TOKEN
 
 # Run the runner
-./run.sh
+#./run.sh
