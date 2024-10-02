@@ -13,6 +13,7 @@ pwd
 
 ls -la
 
+cd actions-runner
 # Configure the runner
 ./config.sh --url $REPO_URL --token $GITHUB_TOKEN
 
