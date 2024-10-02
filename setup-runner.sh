@@ -9,6 +9,10 @@ if [ -z "$GITHUB_TOKEN" ]; then
   exit 1
 fi
 
+pwd
+
+ls -la
+
 # Configure the runner
 ./config.sh --url $REPO_URL --token $GITHUB_TOKEN
 
