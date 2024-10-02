@@ -22,6 +22,12 @@ RUN mkdir actions-runner && cd actions-runner \
     && curl -o actions-runner-linux-x64-2.285.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.285.0/actions-runner-linux-x64-2.285.0.tar.gz \
     && tar xzf ./actions-runner-linux-x64-2.285.0.tar.gz
 
+    # Accept build arguments
+ARG GITHUB_TOKEN
+
+# Set environment variables
+ENV GITHUB_TOKEN=${GITHUB_TOKEN}
+
 # Add the runner startup script
 COPY setup-runner.sh /home/runner/actions-runner/setup-runner.sh
 

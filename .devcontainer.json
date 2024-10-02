@@ -1,7 +1,10 @@
 {
     "name": "GitHub Actions Runner",
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "args": {
+            "GITHUB_TOKEN": "${{ secrets.REGISTER_RUNNER_TOKEN }}"
+        }
     },
     "customizations": {
         "vscode": {
@@ -10,7 +13,10 @@
             },
             "extensions": [
                 "ms-azuretools.vscode-docker",
-                "ms-vscode.cpptools"
+                "ms-vscode.cpptools",
+                "GitHub.copilot-chat",
+                "github.vscode-github-actions",
+                "GitHub.codespaces"
             ] 
         }   
     },
