@@ -17,7 +17,7 @@ cd actions-runner
 pwd
 echo $GITHUB_TOKEN
 # Configure the runner
-./config.sh --url $REPO_URL --token $GITHUB_TOKEN
+#./config.sh --url $REPO_URL --token $GITHUB_TOKEN
 
 # Run the runner
 #./run.sh

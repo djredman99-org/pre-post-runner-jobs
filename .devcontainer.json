@@ -1,10 +1,7 @@
 {
     "name": "GitHub Actions Runner",
     "build": {
-        "dockerfile": "Dockerfile",
-        "args": {
-            "GITHUB_TOKEN": "${{ secrets.REGISTER_RUNNER_TOKEN }}"
-        }
+        "dockerfile": "Dockerfile"
     },
     "customizations": {
         "vscode": {
@@ -23,6 +20,6 @@
  
     "postCreateCommand": "bash .devcontainer/setup-runner.sh",
     "remoteEnv": {
-        "GITHUB_TOKEN": "${{ secrets.REGISTER_RUNNER_TOKEN }}"
+        "GITHUB_TOKEN": "${localEnv:REGISTER_RUNNER_TOKEN}"
     }
 }
