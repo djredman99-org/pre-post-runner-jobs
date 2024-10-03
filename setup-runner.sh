@@ -3,10 +3,12 @@
 # GitHub repository
 REPO_URL="https://github.com/djredman99/pre-post-runner-jobs"
 
+echo $GITHUB_TOKEN
+
 # Check if the token is provided
 if [ -z "$GITHUB_TOKEN" ]; then
   echo "Error: GITHUB_TOKEN environment variable is not set."
-  exit 1
+  #exit 1
 fi
 
 pwd
