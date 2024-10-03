@@ -18,7 +18,7 @@
         }   
     },
  
-    "postCreateCommand": "bash .devcontainer/setup-runner.sh",
+    "postCreateCommand": "bash /home/runner/actions-runner/setup-runner.sh",
     "remoteEnv": {
         "GITHUB_TOKEN": "${localEnv:REGISTER_RUNNER_TOKEN}"
     }

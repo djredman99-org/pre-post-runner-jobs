@@ -35,4 +35,4 @@ COPY setup-runner.sh /home/runner/actions-runner/setup-runner.sh
 COPY .env /home/runner/actions-runner/.env
 
 # Make the script executable
-RUN /bin/sh /home/runner/actions-runner/setup-runner.sh
+# RUN /bin/sh /home/runner/actions-runner/setup-runner.sh
